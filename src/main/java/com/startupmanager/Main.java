@@ -1,4 +1,3 @@
-
 package com.startupmanager;
 
 import javax.swing.JFrame;
@@ -9,6 +8,19 @@ import java.awt.BorderLayout;
 
 public class Main {
     public static void main(String[] args) {
+        //Temp test
+        /*
+        StartupApp chrome = new StartupApp(
+                "Google Chrome",
+                "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+        );
+        System.out.println(chrome.getName());
+        System.out.println(chrome.isEnabled());
+        chrome.setEnabled(false);
+        System.out.println(chrome.isEnabled());
+
+         */
+        //starts the GUI
         SwingUtilities.invokeLater(Main::createWindow);
     }
     private static void createWindow() {
