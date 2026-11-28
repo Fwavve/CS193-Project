@@ -1,5 +1,5 @@
 package com.startupmanager;
-
+import java.io.IOException;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
@@ -8,19 +8,19 @@ import java.awt.BorderLayout;
 
 public class Main {
     public static void main(String[] args) {
-        //Temp test
-        /*
+        //starts the GUI
+        //test
         StartupApp chrome = new StartupApp(
                 "Google Chrome",
                 "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
         );
-        System.out.println(chrome.getName());
-        System.out.println(chrome.isEnabled());
-        chrome.setEnabled(false);
-        System.out.println(chrome.isEnabled());
-
-         */
-        //starts the GUI
+        LaunchApp launcher = new LaunchApp();
+        try {
+            launcher.launch(chrome);
+            System.out.println("Chrome launched successfully!");
+        } catch (IOException e) {
+            System.out.println("Could not launch Chrome: " + e.getMessage());
+        }
         SwingUtilities.invokeLater(Main::createWindow);
     }
     private static void createWindow() {
