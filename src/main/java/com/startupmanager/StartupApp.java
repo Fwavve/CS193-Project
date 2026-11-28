@@ -5,7 +5,7 @@ public class StartupApp {
     private boolean enabled;
 
     public StartupApp(String name, String executablePath) {
-        this.name = name;
+        this.name =name;
         this.executablePath = executablePath;
         this.enabled = true;
     }

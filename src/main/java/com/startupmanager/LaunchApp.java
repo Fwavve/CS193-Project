@@ -19,9 +19,7 @@ public class LaunchApp {
             );
         }
         //start the application
-        ProcessBuilder process = new ProcessBuilder(
-                executable.toString()
-        );
+        ProcessBuilder process = new ProcessBuilder(executable.toString());
         process.start();
     }
 }
